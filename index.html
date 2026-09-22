@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Climate & Sustainability Jobs — EU · UK · Remote</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --eu0:#003399;--eu1:#0A3FA8;--eu2:#1A56C4;--eu3:#3572D8;--eu4:#6A9AE8;--eu5:#A8C8F8;--eu6:#C8DEFF;--eu7:#EBF2FF;
+  --gr0:#071A0A;--gr1:#0D2C14;--gr2:#175A28;--gr3:#289040;--gr4:#42AA58;--gr5:#74CC88;--gr6:#B4E8C0;--gr7:#EAF8EE;
+  --gold:#FFD700;--gold2:#D4A800;--gold3:#FFF0A0;--gold4:#FFFAE0;
+  --bg:#F5F2EE;--bg2:#EDEAE2;--bg3:#FFFFFF;
+  --bdr:rgba(0,30,90,0.09);--bdr2:rgba(0,30,90,0.18);
+  --txt:#080F38;--mut:#5A6270;--fnt:#9AAAB8;
+  --font:'Helvetica Neue',Helvetica,Arial,-apple-system,BlinkMacSystemFont,sans-serif;
+}
+body{background:var(--bg);font-family:var(--font);color:var(--txt);min-height:100vh}
+a{text-decoration:none;color:inherit}
+
+/* ── HEADER ── */
+.hd{
+  position:relative;overflow:hidden;
+  background-image:linear-gradient(180deg,rgba(3,10,20,.72) 0%,rgba(3,10,20,.55) 45%,rgba(3,10,20,.82) 100%),url('assets/hero-zumaia.jpg');
+  background-size:cover;background-position:center 60%;
+}
+.hd-stripe{height:5px;background:var(--eu0);border-bottom:3px solid var(--gold)}
+.hd-body{max-width:1100px;margin:0 auto;padding:2.25rem 2rem 2rem;position:relative;z-index:1}
+.hd-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap}
+.hd-eye{font-family:var(--font);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--eu4);margin-bottom:.55rem;display:flex;align-items:center;gap:7px}
+.hd h1{font-family:var(--font);font-size:2.6rem;font-weight:700;letter-spacing:-.01em;color:#fff;line-height:1.05;margin-bottom:1.25rem}
+.hd h1 .g{color:var(--gr5);font-style:italic}
+.hd h1 .y{color:var(--gold)}
+.hd-stats{display:flex;gap:2rem;flex-wrap:wrap}
+.hs-v{font-family:var(--font);font-size:1.6rem;font-weight:700;color:#fff;line-height:1}
+.hs-l{font-family:var(--font);font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.32);margin-top:2px}
+.hd-pills{display:flex;flex-direction:column;gap:4px;margin-top:4px}
+.hd-pill{font-size:10px;padding:4px 12px;border:1px solid rgba(255,255,255,.12);border-radius:20px;color:rgba(255,255,255,.5);font-family:var(--font);white-space:nowrap}
+
+/* ── INSTITUTION BAR ── */
+.ibar{background:var(--eu1);border-bottom:1px solid rgba(255,255,255,.06);padding:.6rem 0;overflow-x:auto;scrollbar-width:none}
+.ibar::-webkit-scrollbar{display:none}
+.ibar-inner{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;gap:5px;align-items:center}
+.bar-lbl{font-family:var(--font);font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.22);white-space:nowrap;padding-right:8px;border-right:1px solid rgba(255,255,255,.08);margin-right:2px;flex-shrink:0}
+.ic{font-size:10px;padding:3px 11px;border-radius:20px;border:1px solid rgba(255,215,0,.18);color:rgba(255,215,0,.55);white-space:nowrap;cursor:pointer;transition:all .18s;background:transparent;font-family:var(--font);flex-shrink:0}
+.ic.on{background:rgba(255,215,0,.12);border-color:var(--gold);color:var(--gold)}
+.ic:hover:not(.on){border-color:rgba(255,215,0,.38);color:rgba(255,215,0,.85)}
+.ic.ngo{border-color:rgba(116,204,136,.2);color:rgba(116,204,136,.55)}
+.ic.ngo.on{background:rgba(66,170,88,.18);border-color:var(--gr5);color:var(--gr5)}
+
+/* ── SOURCE BAR ── */
+.sbar{background:var(--gr0);border-bottom:1px solid rgba(255,255,255,.05);padding:.55rem 0;overflow-x:auto;scrollbar-width:none}
+.sbar::-webkit-scrollbar{display:none}
+.sbar-inner{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;gap:4px;align-items:center}
+.sc{font-size:10px;padding:3px 9px;border-radius:20px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.42);white-space:nowrap;cursor:pointer;transition:all .15s;background:transparent;font-family:var(--font);flex-shrink:0}
+.sc.on{background:rgba(66,170,88,.25);border-color:var(--gr5);color:var(--gr5)}
+.sc:hover:not(.on){border-color:rgba(255,255,255,.28);color:rgba(255,255,255,.8)}
+
+/* ── TERRITORY ── */
+.tbar{background:var(--bg2);border-bottom:1px solid var(--bdr);padding:.55rem 0}
+.tbar-inner{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;gap:4px;flex-wrap:wrap}
+.tb{font-size:11px;padding:4px 13px;border-radius:5px;border:1px solid transparent;cursor:pointer;font-family:var(--font);transition:all .15s;color:var(--mut);background:transparent}
+.tb.on{background:var(--bg3);border-color:var(--bdr2);color:var(--txt);font-weight:500}
+.tb:hover:not(.on){background:rgba(0,0,0,.04)}
+.tb-n{font-family:var(--font);font-size:9px;margin-left:3px;opacity:.5}
+
+/* ── CONTROLS ── */
+.ctrl{background:var(--bg);border-bottom:1px solid var(--bdr);padding:.85rem 0}
+.ctrl-inner{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.sw{flex:1;min-width:160px;position:relative}
+.sw svg{position:absolute;left:10px;top:50%;transform:translateY(-50%)}
+.si{width:100%;padding:8px 10px 8px 32px;border:1px solid var(--bdr2);border-radius:7px;background:var(--bg3);font-family:var(--font);font-size:13px;color:var(--txt);outline:none;transition:border .15s}
+.si:focus{border-color:var(--eu2)}
+.si::placeholder{color:var(--fnt)}
+select{padding:7px 10px;border:1px solid var(--bdr2);border-radius:7px;background:var(--bg3);font-family:var(--font);font-size:12px;color:var(--txt);cursor:pointer;outline:none;transition:border .15s}
+select:focus{border-color:var(--eu2)}
+.clr-btn{padding:7px 12px;background:transparent;border:1px solid var(--bdr);border-radius:7px;font-size:11px;color:var(--mut);cursor:pointer;font-family:var(--font);transition:all .15s}
+.clr-btn:hover{border-color:var(--gr3);color:var(--gr2)}
+
+/* ── RESULT BAR ── */
+.rbar{background:var(--bg);border-bottom:1px solid var(--bdr);padding:.65rem 0}
+.rbar-inner{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.4rem}
+.rc{font-family:var(--font);font-size:10px;color:var(--mut)}
+.rc strong{color:var(--eu1)}
+.sorts{display:flex;gap:3px}
+.srt{padding:4px 10px;border-radius:5px;border:1px solid transparent;font-size:10.5px;cursor:pointer;font-family:var(--font);color:var(--mut);background:transparent;transition:all .15s}
+.srt.on{background:var(--eu0);color:white}
+.srt:hover:not(.on){border-color:var(--bdr2);color:var(--txt)}
+
+/* ── JOB LIST ── */
+.jlist-wrap{max-width:1100px;margin:0 auto}
+.jlist{background:var(--bg3);border-left:1px solid var(--bdr);border-right:1px solid var(--bdr)}
+.day-sep{padding:.35rem 2rem;font-family:var(--font);font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--fnt);background:var(--bg);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
+
+.jc{border-bottom:1px solid var(--bdr);padding:1.125rem 2rem;cursor:pointer;transition:background .1s;display:grid;grid-template-columns:42px 1fr 98px;gap:.9rem;align-items:start;position:relative}
+.jc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;transition:width .15s;border-radius:0 2px 2px 0}
+.jc:hover{background:var(--eu7)}
+.jc:hover::before{width:3px;background:var(--eu3)}
+/* EU Institution: gold left border + warm tint */
+.jc.inst-card{border-left:3px solid var(--gold2);padding-left:calc(2rem - 3px);background:rgba(255,245,180,.15)}
+.jc.inst-card::before{display:none}
+.jc.inst-card:hover{background:var(--gold4)}
+/* Featured green */
+.jc.feat-card{border-left:3px solid var(--gr4);padding-left:calc(2rem - 3px)}
+.jc.feat-card::before{display:none}
+.jc.feat-card:hover{background:var(--gr7)}
+
+.logo{width:42px;height:42px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-size:10px;font-weight:500;flex-shrink:0;position:relative;letter-spacing:.02em}
+.logo.eu-logo::after{content:'★';position:absolute;bottom:-2px;right:-2px;font-size:7px;color:var(--gold2);background:var(--eu0);border-radius:50%;width:11px;height:11px;display:flex;align-items:center;justify-content:center;line-height:11px;text-align:center}
+
+.jbody{}
+.jtop{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:3px}
+.jtitle{font-family:var(--font);font-size:1rem;font-weight:700;color:var(--txt);line-height:1.25}
+.jco{font-size:11px;color:var(--mut);margin-bottom:6px}
+.jmeta{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:7px;align-items:center}
+.jm{font-size:10.5px;color:var(--mut);display:flex;align-items:center;gap:3px}
+.jtags{display:flex;gap:3px;flex-wrap:wrap}
+.jt{font-size:9.5px;padding:2px 7px;border-radius:3px;background:var(--bg2);color:var(--mut);border:1px solid var(--bdr);font-family:var(--font);cursor:pointer;transition:all .13s}
+.jt:hover{background:var(--eu7);border-color:var(--eu4);color:var(--eu1)}
+.jc.inst-card .jt:hover{background:var(--gold4);border-color:var(--gold2);color:var(--eu0)}
+
+.jright{display:flex;flex-direction:column;align-items:flex-end;gap:5px;padding-top:1px}
+.jdate{font-family:var(--font);font-size:9.5px;color:var(--fnt)}
+.jsrc{font-size:8.5px;font-family:var(--font);padding:2px 6px;border-radius:3px;background:var(--bg2);color:var(--mut);border:1px solid var(--bdr)}
+.jsrc.eu-src{background:rgba(0,51,153,.07);color:var(--eu1);border-color:rgba(0,51,153,.2)}
+.jap{padding:5px 12px;border:1px solid var(--eu2);color:var(--eu1);background:transparent;border-radius:5px;font-size:11px;font-weight:500;cursor:pointer;font-family:var(--font);transition:all .2s;text-decoration:none;display:inline-block;opacity:0;transform:translateX(3px)}
+.jc:hover .jap{opacity:1;transform:translateX(0)}
+.jap:hover{background:var(--eu1);color:white}
+.jc.inst-card .jap{border-color:var(--gold2);color:var(--eu0)}
+.jc.inst-card .jap:hover{background:var(--gold2);color:var(--eu0)}
+
+/* ── BADGES ── */
+.b{font-family:var(--font);font-size:9px;padding:2px 7px;border-radius:3px;font-weight:500;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
+.brem{background:#DFF0E8;color:#145A22;border:1px solid #88C8A0}
+.bhyb{background:#FEF2DC;color:#785010;border:1px solid #E8C068}
+.bons{background:var(--eu7);color:var(--eu1);border:1px solid var(--eu6)}
+.bnew{background:var(--gr0);color:var(--gr5)}
+.bfeat{background:var(--eu0);color:#C8DCFF}
+.binst{background:var(--gold4);color:var(--eu0);border:1px solid var(--gold3)}
+.buk{background:#F5E8EA;color:#7A1828;border:1px solid #D8A0A8}
+.bdead{background:#FFF8D0;color:#7A5000;border:1px solid #E8C860}
+
+/* ── EMPTY STATE ── */
+.empty{padding:4rem 2rem;text-align:center;background:var(--bg3)}
+.empty h3{font-family:var(--font);font-size:1.3rem;font-weight:600;color:var(--eu1);margin-bottom:.4rem}
+.empty p{font-size:12px;color:var(--mut)}
+
+/* ── CTA ── */
+.cta{background:linear-gradient(135deg,var(--eu0) 0%,#001A60 55%,var(--gr0) 100%);padding:1.75rem 0;border-top:2.5px solid var(--gold2)}
+.cta-inner{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;gap:1rem;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.cta-l h3{font-family:var(--font);font-size:1rem;font-weight:700;color:#fff;margin-bottom:3px}
+.cta-l p{font-size:11px;color:rgba(255,255,255,.38)}
+.btn-post{padding:9px 20px;background:var(--gr4);color:#fff;border:none;border-radius:7px;font-size:12px;font-weight:500;cursor:pointer;font-family:var(--font);transition:background .2s}
+.btn-post:hover{background:var(--gr3)}
+
+/* ── FOOTER ── */
+.foot{background:var(--eu0);border-top:1px solid rgba(255,255,255,.06);padding:1rem 0}
+.foot-inner{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.foot-l{font-family:var(--font);font-size:9px;color:rgba(255,255,255,.25);letter-spacing:.05em}
+.foot-sources{font-size:10px;color:rgba(255,255,255,.3);font-family:var(--font)}
+
+/* ── PAGINATION ── */
+.pager{padding:1.25rem 0;background:var(--bg)}
+.pager-inner{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;justify-content:center;gap:5px}
+.pg{width:30px;height:30px;border:1px solid var(--bdr);border-radius:6px;background:var(--bg3);color:var(--mut);font-size:11px;cursor:pointer;font-family:var(--font);display:flex;align-items:center;justify-content:center;transition:all .15s}
+.pg.on{background:var(--eu0);color:white;border-color:var(--eu0)}
+.pg:hover:not(.on){border-color:var(--eu3);color:var(--eu1)}
+
+@media(max-width:640px){
+  .jc{grid-template-columns:36px 1fr}.jright{display:none}
+  .hd h1{font-size:1.9rem}.hd-stats{gap:1.25rem}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="hd">
+  <div class="hd-stripe"></div>
+  <div class="hd-body">
+    <div class="hd-inner">
+      <div>
+        <div class="hd-eye">EU · UK · Remote &nbsp;·&nbsp; Climate &amp; Sustainability</div>
+        <h1>Curated climate &amp; sustainability<br>roles across <span class="y">EU, UK and Remote.</span></h1>
+        <div class="hd-stats">
+          <div><div class="hs-v" id="hdTot">28</div><div class="hs-l">Open roles</div></div>
+          <div><div class="hs-v" id="hdInst">6</div><div class="hs-l">EU Institutions</div></div>
+          <div><div class="hs-v">18</div><div class="hs-l">Sources</div></div>
+          <div><div class="hs-v">Daily</div><div class="hs-l">Updated</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INSTITUTION FILTER -->
+<div class="ibar">
+  <div class="ibar-inner">
+    <span class="bar-lbl">★ EU Institutions</span>
+    <button class="ic on" onclick="setInst('',this)">All</button>
+    <button class="ic" onclick="setInst('EC',this)">European Commission</button>
+    <button class="ic" onclick="setInst('EP',this)">EU Parliament</button>
+    <button class="ic" onclick="setInst('EEA',this)">EEA</button>
+    <button class="ic" onclick="setInst('EIB',this)">EIB</button>
+    <button class="ic" onclick="setInst('INTL',this)">OECD / UN Agencies</button>
+    <button class="ic ngo" onclick="setInst('NGO',this)">NGO &amp; Private only</button>
+  </div>
+</div>
+
+<!-- SOURCE BAR -->
+<div class="sbar">
+  <div class="sbar-inner">
+    <span class="bar-lbl" style="color:rgba(255,255,255,.2)">Job boards</span>
+    <button class="sc on" onclick="setSrc('',this)">All sources</button>
+    <button class="sc" onclick="setSrc('EU Careers',this)">EU Careers (EPSO)</button>
+    <button class="sc" onclick="setSrc('EEA',this)">EEA Careers</button>
+    <button class="sc" onclick="setSrc('Climatebase',this)">Climatebase</button>
+    <button class="sc" onclick="setSrc('Terra.do',this)">Terra.do</button>
+    <button class="sc" onclick="setSrc('Acre',this)">Acre (UK)</button>
+    <button class="sc" onclick="setSrc('EuroClimateJobs',this)">EuroClimateJobs</button>
+    <button class="sc" onclick="setSrc('EuroBrussels',this)">EuroBrussels</button>
+    <button class="sc" onclick="setSrc('EnableGreen',this)">EnableGreen</button>
+    <button class="sc" onclick="setSrc('inClimate',this)">inClimate</button>
+    <button class="sc" onclick="setSrc('GreenJobs',this)">GreenJobs.co.uk</button>
+    <button class="sc" onclick="setSrc('80k',this)">80k Hours</button>
+    <button class="sc" onclick="setSrc('IISD',this)">IISD Jobs</button>
+    <button class="sc" onclick="setSrc('CharityJob',this)">CharityJob</button>
+    <button class="sc" onclick="setSrc('ENDS',this)">ENDS Jobs</button>
+    <button class="sc" onclick="setSrc('The Impact Job',this)">The Impact Job</button>
+    <button class="sc" onclick="setSrc('Escape the City',this)">Escape the City</button>
+    <button class="sc" onclick="setSrc('LinkedIn',this)">LinkedIn</button>
+  </div>
+</div>
+
+<!-- TERRITORY TABS -->
+<div class="tbar">
+  <div class="tbar-inner">
+    <button class="tb on" onclick="setT('all',this)">All regions <span class="tb-n" id="tca">28</span></button>
+    <button class="tb" onclick="setT('EU',this)">🇪🇺 EU <span class="tb-n" id="tceu">—</span></button>
+    <button class="tb" onclick="setT('UK',this)">🇬🇧 UK <span class="tb-n" id="tcuk">—</span></button>
+    <button class="tb" onclick="setT('Remote',this)">⟳ Remote <span class="tb-n" id="tcrem">—</span></button>
+  </div>
+</div>
+
+<!-- SEARCH & FILTERS -->
+<div class="ctrl">
+  <div class="ctrl-inner">
+    <div class="sw">
+      <svg width="12" height="12" viewBox="0 0 13 13" fill="none"><circle cx="5.5" cy="5.5" r="4" stroke="#9aabbb" stroke-width="1.3"/><line x1="8.5" y1="8.5" x2="12" y2="12" stroke="#9aabbb" stroke-width="1.3" stroke-linecap="round"/></svg>
+      <input class="si" id="si" placeholder="Role, institution, skill, keyword...">
+    </div>
+    <select id="secF" onchange="go()">
+      <option value="">All sectors</option>
+      <option>Policy &amp; Advocacy</option>
+      <option>Climate Tech</option>
+      <option>Green Finance</option>
+      <option>NGO / Nonprofit</option>
+      <option>Research</option>
+      <option>Consulting</option>
+      <option>Renewable Energy</option>
+      <option>ESG / Corporate</option>
+      <option>Nature &amp; Biodiversity</option>
+      <option>Communications &amp; Marketing</option>
+    </select>
+    <select id="typF" onchange="go()">
+      <option value="">All types</option>
+      <option>Full-time</option>
+      <option>Contract</option>
+      <option>Traineeship</option>
+      <option>Internship</option>
+    </select>
+    <select id="senF" onchange="go()">
+      <option value="">All levels</option>
+      <option>Entry</option>
+      <option>Mid</option>
+      <option>Senior</option>
+      <option>Director+</option>
+    </select>
+    <button class="clr-btn" onclick="clearAll()">✕ Clear</button>
+  </div>
+</div>
+
+<!-- RESULTS BAR -->
+<div class="rbar">
+  <div class="rbar-inner">
+    <span class="rc"><strong id="rcnt">—</strong> roles match</span>
+    <div class="sorts">
+      <button class="srt on" onclick="setSort('new',this)">Newest</button>
+      <button class="srt" onclick="setSort('inst',this)">EU Institutions first</button>
+      <button class="srt" onclick="setSort('deadline',this)">Deadline ↑</button>
+      <button class="srt" onclick="setSort('az',this)">A–Z</button>
+    </div>
+  </div>
+</div>
+
+<!-- JOB LIST -->
+<div class="jlist-wrap">
+  <div class="jlist" id="jlist"></div>
+</div>
+
+<!-- POST CTA -->
+<div class="cta">
+  <div class="cta-inner">
+    <div class="cta-l">
+      <h3>Hiring in climate, sustainability or EU policy?</h3>
+      <p>Reach 4,000+ professionals looking for EU, UK and remote roles with purpose.</p>
+    </div>
+    <button class="btn-post">Post a role →</button>
+  </div>
+</div>
+
+<!-- PAGINATION -->
+<div class="pager"><div class="pager-inner" id="pager"></div></div>
+
+<!-- FOOTER -->
+<div class="foot">
+  <div class="foot-inner">
+    <span class="foot-l">Climate &amp; Sustainability Jobs · EU · UK · Remote · Updated daily</span>
+    <span class="foot-sources">Sources: EU Careers · EEA · Climatebase · Terra.do · Acre · EuroClimateJobs · EuroBrussels · EnableGreen · inClimate · GreenJobs.co.uk · 80k Hours · IISD · CharityJob · ENDS Jobs · The Impact Job · Escape the City · LinkedIn</span>
+  </div>
+</div>
+
+<script>
+const API_URL = 'https://rhizagroup.com/api/jobs?limit=500';
+
+let ALL = [];
+let fil=[],srcF='',terrF='all',instF='',sortM='new',page=1;
+const PER=10;
+
+async function loadJobs(){
+  const el=document.getElementById('jlist');
+  el.innerHTML='<div class="empty"><h3>Loading roles…</h3><p>Fetching the latest listings.</p></div>';
+  try{
+    const res=await fetch(API_URL);
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const data=await res.json();
+    // classifier.js/worker.js use "territory" — this frontend was built
+    // expecting "terr". Mapped here rather than renaming across the whole
+    // codebase, to keep the API contract stable for other consumers.
+    ALL=(data.jobs||[]).map(j=>({...j, terr:j.territory||j.terr}));
+    renderSources(data.sources||[]);
+  }catch(err){
+    el.innerHTML=`<div class="empty"><h3>Couldn't load roles</h3><p>${err.message}. Try refreshing the page.</p></div>`;
+    document.getElementById('pager').innerHTML='';
+    return;
+  }
+  fil=[...ALL];
+  counts();doSort();render();
+}
+
+function renderSources(sources){
+  const el=document.querySelector('.foot-sources');
+  if(el) el.textContent = sources.length ? `Sources: ${sources.join(' · ')}` : 'Sources: —';
+  const hs=document.querySelectorAll('.hs-v');
+  if(hs[2]) hs[2].textContent = sources.length || '—';
+}
+
+
+function ago(d){
+  const n=Math.floor((Date.now()-new Date(d))/86400000);
+  if(n===0)return'Today';if(n===1)return'Yesterday';
+  if(n<7)return n+'d ago';if(n<30)return Math.floor(n/7)+'w ago';
+  return Math.floor(n/30)+'mo ago';
+}
+function mCls(m){return m==='Remote'?'brem':m==='Hybrid'?'bhyb':'bons'}
+function tCls(t){return t==='UK'?'buk':t==='Remote'?'brem':'bons'}
+
+function counts(){
+  document.getElementById('tca').textContent=ALL.length;
+  document.getElementById('tceu').textContent=ALL.filter(j=>j.terr==='EU').length;
+  document.getElementById('tcuk').textContent=ALL.filter(j=>j.terr==='UK').length;
+  document.getElementById('tcrem').textContent=ALL.filter(j=>j.terr==='Remote').length;
+  document.getElementById('hdTot').textContent=ALL.length;
+  document.getElementById('hdInst').textContent=ALL.filter(j=>j.eu&&j.inst&&j.inst!=='INTL').length;
+}
+
+function render(){
+  const el=document.getElementById('jlist');
+  const sl=fil.slice((page-1)*PER,(page-1)*PER+PER);
+  document.getElementById('rcnt').textContent=fil.length;
+  if(!fil.length){
+    el.innerHTML='<div class="empty"><h3>No roles found</h3><p>Try adjusting your filters or clearing your search.</p></div>';
+    document.getElementById('pager').innerHTML='';return;
+  }
+  let h='',ld='';
+  sl.forEach(j=>{
+    const d=new Date(j.date).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+    if(d!==ld){h+=`<div class="day-sep">${d}</div>`;ld=d;}
+    const cardCls=j.eu&&j.inst?'jc inst-card':j.feat?'jc feat-card':'jc';
+    const logoCls=j.eu&&j.inst?'logo eu-logo':'logo';
+    const init=(j.co.match(/[A-Z]/g)||[]).slice(0,3).join('')||j.co.slice(0,3).toUpperCase();
+    h+=`<div class="${cardCls}" onclick="window.open('${j.url}','_blank')">
+      <div class="${logoCls}" style="background:${j.lc};color:${j.lt}">${init}</div>
+      <div class="jbody">
+        <div class="jtop">
+          ${j.eu&&j.inst?'<span class="b binst">★ EU Institution</span>':''}
+          ${j.isNew&&!(j.eu&&j.inst)?'<span class="b bnew">New</span>':''}
+          ${j.feat&&!(j.eu&&j.inst)?'<span class="b bfeat">Featured</span>':''}
+          ${j.deadline?`<span class="b bdead">⏱ ${j.deadline}</span>`:''}
+          <span class="jtitle">${j.title}</span>
+        </div>
+        <div class="jco">${j.co} &nbsp;·&nbsp; ${j.sector}</div>
+        <div class="jmeta">
+          <span class="jm">
+            <svg width="9" height="10" viewBox="0 0 9 11" fill="none"><path d="M4.5 1C3 1 1 2.5 1 4.5c0 2.8 3.5 6.5 3.5 6.5s3.5-3.7 3.5-6.5C8 2.5 6 1 4.5 1z" stroke="currentColor" stroke-width="1" fill="none"/><circle cx="4.5" cy="4.5" r="1.2" fill="currentColor"/></svg>
+            ${j.loc}
+          </span>
+          <span class="b ${mCls(j.mode)}">${j.mode}</span>
+          <span class="b ${tCls(j.terr)}">${j.terr}</span>
+          <span class="jm">${j.type}</span>
+          <span class="jm">${j.lvl}</span>
+        </div>
+        <div class="jtags">${j.tags.map(t=>`<span class="jt" onclick="event.stopPropagation();tagC('${t.replace(/'/g,"\\'")}')">${t}</span>`).join('')}</div>
+      </div>
+      <div class="jright">
+        <span class="jdate">${ago(j.date)}</span>
+        <span class="jsrc${j.eu?' eu-src':''}">${j.src}</span>
+        <a class="jap" href="${j.url}" target="_blank" onclick="event.stopPropagation()">Apply →</a>
+      </div>
+    </div>`;
+  });
+  el.innerHTML=h;
+  const tot=Math.ceil(fil.length/PER);
+  if(tot<=1){document.getElementById('pager').innerHTML='';return;}
+  let ph='';
+  for(let i=1;i<=tot;i++)ph+=`<button class="pg${i===page?' on':''}" onclick="gP(${i})">${i}</button>`;
+  document.getElementById('pager').innerHTML=ph;
+}
+
+function gP(n){page=n;render();window.scrollTo({top:0,behavior:'smooth'})}
+
+function go(){
+  const q=document.getElementById('si').value.toLowerCase();
+  const sec=document.getElementById('secF').value;
+  const typ=document.getElementById('typF').value;
+  const sen=document.getElementById('senF').value;
+  fil=ALL.filter(j=>{
+    if(srcF&&j.src!==srcF)return false;
+    if(terrF!=='all'&&j.terr!==terrF)return false;
+    if(instF==='NGO'&&j.eu)return false;
+    if(instF&&instF!=='NGO'&&j.inst!==instF)return false;
+    if(q&&!(j.title.toLowerCase().includes(q)||j.co.toLowerCase().includes(q)||j.tags.some(t=>t.toLowerCase().includes(q))))return false;
+    if(sec&&j.sector!==sec)return false;
+    if(typ&&j.type!==typ)return false;
+    if(sen&&j.lvl!==sen)return false;
+    return true;
+  });
+  doSort();page=1;render();
+}
+
+function doSort(){
+  if(sortM==='new')fil.sort((a,b)=>new Date(b.date)-new Date(a.date));
+  else if(sortM==='inst')fil.sort((a,b)=>(b.eu-a.eu)||(b.feat-a.feat)||(new Date(b.date)-new Date(a.date)));
+  else if(sortM==='deadline')fil.sort((a,b)=>{
+    if(!a.deadline&&!b.deadline)return 0;
+    if(!a.deadline)return 1;if(!b.deadline)return -1;
+    return new Date(a.deadline+' 2026')-new Date(b.deadline+' 2026');
+  });
+  else fil.sort((a,b)=>a.title.localeCompare(b.title));
+}
+
+function setSort(s,btn){sortM=s;document.querySelectorAll('.srt').forEach(b=>b.classList.remove('on'));btn.classList.add('on');go()}
+function setSrc(s,btn){srcF=s;document.querySelectorAll('.sc').forEach(b=>b.classList.remove('on'));btn.classList.add('on');go()}
+function setT(t,btn){terrF=t;document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');go()}
+function setInst(f,btn){instF=f;document.querySelectorAll('.ic').forEach(b=>b.classList.remove('on'));btn.classList.add('on');go()}
+function tagC(t){document.getElementById('si').value=t;go()}
+
+function clearAll(){
+  document.getElementById('si').value='';
+  ['secF','typF','senF'].forEach(id=>document.getElementById(id).value='');
+  srcF='';terrF='all';instF='';sortM='new';
+  document.querySelectorAll('.sc').forEach((b,i)=>b.classList.toggle('on',i===0));
+  document.querySelectorAll('.tb').forEach((b,i)=>b.classList.toggle('on',i===0));
+  document.querySelectorAll('.ic').forEach((b,i)=>b.classList.toggle('on',i===0));
+  document.querySelectorAll('.srt').forEach((b,i)=>b.classList.toggle('on',i===0));
+  fil=[...ALL];page=1;render();
+}
+
+document.getElementById('si').addEventListener('input',go);
+
+loadJobs();
+</script>
+</body>
+</html>
